@@ -1,0 +1,12 @@
+2016-01-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Initial CRAN release 0.1.0
+
+	* LICENSE: Further edits and clarifications
+
+ 	* inst/COPYRIGHT: Added for extra clarification
+
+2016-01-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* ChangeLog: Added
+

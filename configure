@@ -1,0 +1,91 @@
+#!/bin/bash
+## Emacs please make this -*- mode: shell-mode; -*-
+##
+##  configure -- Unix build preparation system
+##
+##  Copyright (C) 2015  Dirk Eddelbuettel 
+##
+##  This file is part of x13binary
+##
+##  x13binary is free software: you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation, either version 2 of the License, or
+##  (at your option) any later version.
+##
+##  x13binary is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with x13binary.  If not, see <http://www.gnu.org/licenses/>.
+
+## Check that we are on Unix
+uname=$(type -P uname)
+if [ "${uname}" = "" ]; then
+    echo "You do not have uname so this is unlikely to be a Unix system. Exiting."
+    exit -1
+fi
+
+## Check for Linux or OSX
+: ${R_HOME=$(R RHOME)}
+sysname=$(${R_HOME}/bin/Rscript -e 'cat(Sys.info()["sysname"])')
+if [ ${sysname} == "Linux" ]; then
+    platform="linux"
+    arch=$(uname -m)
+    if [ "${arch}" = "x86_64" ]; then
+        flavour="64"
+    elif [ "${arch}" = "i686" ]; then
+        flavour="32"
+    else
+        echo "Unknown architecture: ${arch}. Exiting."
+        exit -1
+    fi
+elif [ ${sysname} == "Darwin" ]; then
+    platform="osx"
+else
+    platform=${sysname}
+    echo "Unusual platform: ${sysname}"
+    echo "For this platform, there are currently no binaries of X-13ARIMA-SEATS"
+    echo "available. If you have binaries or building scripts, you are invited"
+    echo "to contribute to the project."
+    echo "Visit: https://github.com/x13org/x13prebuilt"
+    exit 0
+fi
+
+## helper function to not rely on curl which at least on OS X fails to follow redirects
+download() {
+    url=${1}
+    ## sadly, for Travis we cannot rely on R as it lacks libcurl
+    libcurl=$(${R_HOME}/bin/Rscript -e 'cat(capabilities()[["libcurl"]])')
+    ## so when we have libcurl in R, use it -- else fall back to curl
+    if [ ${libcurl} == "TRUE" ]; then
+        file=$(basename ${url})
+        ${R_HOME}/bin/Rscript -e "download.file(\"${url}\", \"${file}\", quiet=TRUE, method='libcurl')"
+    else
+        curl -s -k -L -O ${url}
+    fi
+}
+
+cwd=$(pwd)
+
+## On Linux, download binary
+if [ ${platform} == "linux" ]; then
+    cd inst/bin
+    download https://github.com/x13org/x13prebuilt/raw/master/linux/${flavour}/x13ashtml
+    chmod 0775 x13ashtml
+    echo "*** downloaded Linux binary"
+    cd ${cwd}
+elif [ ${platform} == "osx" ]; then
+    cd inst
+    download https://github.com/x13org/x13prebuilt/raw/master/osx/x13ashtml.tar.gz
+    tar -zxvf x13ashtml.tar.gz
+    cp -r x13ashtml/bin .
+    cp -r x13ashtml/lib .
+    rm -r x13ashtml
+    rm x13ashtml.tar.gz
+    cd ${cwd}
+fi
+    
+exit 0
+
