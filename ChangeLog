@@ -1,3 +1,20 @@
+2016-02-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version): Release 0.1.1
+
+2016-02-07  Christoph Sax  <christoph.sax@gmail.com>
+
+	* checkX13binary.R:
+	- more verbose output on Win
+	- temporarily change working directory for X-13 run on Win
+	- command in quotes on Win (to make it work with whitespaces in
+	filenames)
+
+2016-01-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add CRAN version and download badges, as well as an
+	'Installation' section
+
 2016-01-18  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Initial CRAN release 0.1.0
