@@ -10,10 +10,10 @@
 ### About
 
 This package provides an installer for [R](https://www.r-project.org) to
-access prebuilt binaries of [X-13ARIMA-SEATS](https://www.census.gov/srd/www/x13as/) from the sibbling
+access prebuilt binaries of [X-13ARIMA-SEATS](https://www.census.gov/data/software/x13as.X-13ARIMA-SEATS.html) from the sibbling
 repository [x13prebuilt](https://github.com/x13org/x13prebuilt). This allows
 for fully automated installation of a
-[X-13ARIMA-SEATS](https://www.census.gov/srd/www/x13as/) binary simply by
+[X-13ARIMA-SEATS](https://www.census.gov/data/software/x13as.X-13ARIMA-SEATS.html) binary simply by
 adding `Depends: x13binary` to your R package.
 
 ### Installation
@@ -33,7 +33,7 @@ operational for Windows, OS X (Darwin) and Linux (via using statically linked
 binaries).
 
 The current version of [x13binary](https://github.com/x13org/x13binary) uses
-**version 1.1, build 39** of of X-13, as can be verified by:
+**version 1.1, build 57** of of X-13, as can be verified by:
 
 ```
 seasonal::udg(seasonal::seas(AirPassengers), c("version", "build"))
