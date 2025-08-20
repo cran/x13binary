@@ -2,9 +2,9 @@
 
 [![ci Mac, Ubuntu](https://github.com/x13org/x13binary/actions/workflows/ci.yaml/badge.svg)](https://github.com/x13org/x13binary/actions/workflows/ci.yaml)
 [![ci Windows](https://github.com/x13org/x13binary/actions/workflows/ci-win.yaml/badge.svg)](https://github.com/x13org/x13binary/actions/workflows/ci-win.yaml)
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
-[![CRAN](http://www.r-pkg.org/badges/version/x13binary)](https://cran.r-project.org/package=x13binary) 
-[![Downloads](http://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
+[![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
+[![CRAN](https://www.r-pkg.org/badges/version/x13binary)](https://cran.r-project.org/package=x13binary) 
+[![Downloads](https://cranlogs.r-pkg.org/badges/x13binary?color=brightgreen)](https://cran.r-project.org/package=x13binary)
 
 ### About
 
@@ -25,7 +25,7 @@ install.packages("x13binary")
 ### Status
 
 The current version of [x13binary](https://github.com/x13org/x13binary) uses
-**version 1.1, build 60** of of X-13, as can be verified by:
+**version 1.1, build 61** of of X-13, as can be verified by:
 
 ```
 seasonal::udg(seasonal::seas(AirPassengers), c("version", "build"))
@@ -35,8 +35,10 @@ seasonal::udg(seasonal::seas(AirPassengers), c("version", "build"))
 ### License Information and Disclaimer
 
 As stated in the manual of
-[X-13ARIMA-SEATS](https://www2.census.gov/software/x-13arima-seats/x13as/windows/documentation/docx13as.pdf)
+[X-13ARIMA-SEATS](https://web.archive.org/web/20250412173420/https://www2.census.gov/software/x-13arima-seats/x13as/windows/documentation/docx13as.pdf)
 (June 12, 2023):
+
+
 
 > This Software was created by U.S. Government employees and therefore is not
 > subject to copyright in the United States (17 U.S.C. §105). The United

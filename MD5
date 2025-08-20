@@ -1,5 +1,5 @@
-3136027822f1be304df6311175dea26f *ChangeLog
-a647968f2de03965c3ca5a3c518a2961 *DESCRIPTION
+dac1a5166ef97e8a51140f252f38b484 *ChangeLog
+24adf9bea36bd5bba96a140f845c9e7b *DESCRIPTION
 005eae71446d2d951890493a4b23cf09 *LICENSE
 d0134c28608d9613f72e00c28525f4a7 *NAMESPACE
 8b7cd4ca8eb9640c9f8a477b69be7e61 *R/checkX13binary.R
@@ -7,7 +7,7 @@ d0134c28608d9613f72e00c28525f4a7 *NAMESPACE
 75e411fe8347e06991efa05388b0c362 *R/supportedPlatform.R
 2c4865333ddace3bb3e53e18ec501e8d *R/x13binary-package.R
 968108b356e46f8ad5ae26c60608ec25 *R/x13path.R
-4e694c5c6a35171a6ce27ad147a4ff19 *README.md
+e92d358287556b74eadb4d0981d4e2ab *README.md
 45d82b2a0ad18af06546000b31b3522d *cleanup
 f7ce2d6c0d24d288e1201dcc1ec505e5 *inst/AUTHORS
 e5f7b37cf0af756f8b50e964399e59e4 *inst/COPYRIGHT
@@ -17,8 +17,8 @@ e5f7b37cf0af756f8b50e964399e59e4 *inst/COPYRIGHT
 19148d849e9bb998ed84bd1a8aa17305 *man/supportedPlatform.Rd
 6623ae8ca0d558b747c0fa1782efe069 *man/x13binary-package.Rd
 d0a555ec1ba70653a6280728743991d1 *man/x13path.Rd
-8ad79543100352072a8bf7763a0077a3 *src/Makefile
-ca7f6c92c964914c44f3661686e39328 *src/Makefile.win
+1e694ecb7db12a24ae737e76368c28b0 *src/Makefile
+0ab796b89a45c7ad47efa3dd2f371eb0 *src/Makefile.win
 c535f9e9f4cf5c1eebf9d2fd27fbfa3f *src/install.libs.R
 89f0c989fd19bdde279e820415aead0d *tests/simpleTest.R
 193d79395f2583b4850d3bedbf672a37 *tests/simpleTest.Rout.save
@@ -424,7 +424,7 @@ b2210027c25991ee7a8af31fb45f2184 *tools/x13as_html/holidy.f
 f862e88151a39626fbfed6af9a7b0d21 *tools/x13as_html/htmlfile.cmn
 ec9724b903938e789a08a25144ec5a01 *tools/x13as_html/htmlfortable.f
 85fdeefd55b5fb996f9673d3e3287d5f *tools/x13as_html/htmlout.cmn
-975959558688288be4c09874817c78c2 *tools/x13as_html/htmlout.f
+da349b957ebbfc2e48a43d9d6b97fcc0 *tools/x13as_html/htmlout.f
 e9f28deb419d9148d8587c0bd258457e *tools/x13as_html/htmlout.prm
 80ddf75985c315ea93ca43d8ca10a7d7 *tools/x13as_html/htmlutil.f
 0ef0bb178e6b47c012be30e01d1a7ca5 *tools/x13as_html/idamax.f
