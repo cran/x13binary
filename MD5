@@ -1,5 +1,5 @@
-dac1a5166ef97e8a51140f252f38b484 *ChangeLog
-24adf9bea36bd5bba96a140f845c9e7b *DESCRIPTION
+be6f8f1db1ebd426373938a1fc2691d4 *ChangeLog
+98be2427697739805760a6d50b504e7b *DESCRIPTION
 005eae71446d2d951890493a4b23cf09 *LICENSE
 d0134c28608d9613f72e00c28525f4a7 *NAMESPACE
 8b7cd4ca8eb9640c9f8a477b69be7e61 *R/checkX13binary.R
@@ -17,8 +17,8 @@ e5f7b37cf0af756f8b50e964399e59e4 *inst/COPYRIGHT
 19148d849e9bb998ed84bd1a8aa17305 *man/supportedPlatform.Rd
 6623ae8ca0d558b747c0fa1782efe069 *man/x13binary-package.Rd
 d0a555ec1ba70653a6280728743991d1 *man/x13path.Rd
-1e694ecb7db12a24ae737e76368c28b0 *src/Makefile
-0ab796b89a45c7ad47efa3dd2f371eb0 *src/Makefile.win
+7732d9c1420c1fedea25fe7d760c9256 *src/Makefile
+3b501e6cca64e9e50c2b28e5b28da0e7 *src/Makefile.win
 c535f9e9f4cf5c1eebf9d2fd27fbfa3f *src/install.libs.R
 89f0c989fd19bdde279e820415aead0d *tests/simpleTest.R
 193d79395f2583b4850d3bedbf672a37 *tests/simpleTest.Rout.save
